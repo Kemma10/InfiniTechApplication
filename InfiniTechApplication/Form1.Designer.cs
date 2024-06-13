@@ -68,42 +68,48 @@
             // newStripMenuItem
             // 
             this.newStripMenuItem.Name = "newStripMenuItem";
+            this.newStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.newStripMenuItem.Size = new System.Drawing.Size(276, 26);
-            this.newStripMenuItem.Text = "New                   Ctrl+N";
+            this.newStripMenuItem.Text = "New";
             this.newStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // openStripMenuItem
             // 
             this.openStripMenuItem.Name = "openStripMenuItem";
-            this.openStripMenuItem.Size = new System.Drawing.Size(276, 26);
-            this.openStripMenuItem.Text = "Open                 Ctrl+O";
+            this.openStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.openStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.openStripMenuItem.Text = "Open";
             this.openStripMenuItem.Click += new System.EventHandler(this.openStripMenuItem_Click);
             // 
             // saveStripMenuItem
             // 
             this.saveStripMenuItem.Name = "saveStripMenuItem";
-            this.saveStripMenuItem.Size = new System.Drawing.Size(276, 26);
-            this.saveStripMenuItem.Text = "Save                   Ctrl+S";
+            this.saveStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.saveStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.saveStripMenuItem.Text = "Save";
             this.saveStripMenuItem.Click += new System.EventHandler(this.saveStripMenuItem_Click);
             // 
             // saveAsCtrlShiftSToolStripMenuItem
             // 
             this.saveAsCtrlShiftSToolStripMenuItem.Name = "saveAsCtrlShiftSToolStripMenuItem";
-            this.saveAsCtrlShiftSToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
-            this.saveAsCtrlShiftSToolStripMenuItem.Text = "Save As             Ctrl+Shift+S";
+            this.saveAsCtrlShiftSToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.saveAsCtrlShiftSToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.saveAsCtrlShiftSToolStripMenuItem.Text = "Save As";
             this.saveAsCtrlShiftSToolStripMenuItem.Click += new System.EventHandler(this.saveAsCtrlShiftSToolStripMenuItem_Click);
             // 
             // printStripMenuItem
             // 
             this.printStripMenuItem.Name = "printStripMenuItem";
-            this.printStripMenuItem.Size = new System.Drawing.Size(276, 26);
-            this.printStripMenuItem.Text = "Print                  Ctrl+P";
+            this.printStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.printStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.printStripMenuItem.Text = "Print";
             this.printStripMenuItem.Click += new System.EventHandler(this.printStripMenuItem_Click);
             // 
             // exitStripMenuItem
             // 
             this.exitStripMenuItem.Name = "exitStripMenuItem";
-            this.exitStripMenuItem.Size = new System.Drawing.Size(276, 26);
+            this.exitStripMenuItem.Size = new System.Drawing.Size(295, 26);
             this.exitStripMenuItem.Text = "Exit";
             this.exitStripMenuItem.Click += new System.EventHandler(this.exitStripMenuItem_Click);
             // 
