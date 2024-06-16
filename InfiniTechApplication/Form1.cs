@@ -33,7 +33,7 @@ namespace InfiniTechApplication
             if (!string.IsNullOrWhiteSpace(richTextBox1.Text))
             {
                 DialogResult result = MessageBox.Show(
-                    "Are you sure you want to create a new note and discard the current one?",
+                    "You sure you want to create a new note and discard the current one?",
                     "Confirm New Note",
                     MessageBoxButtons.YesNo
                 );              
