@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -76,6 +77,53 @@ namespace InfiniTechApplication
         private void exitStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit(); //Closes application
+        }
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Menu_Undo(sender, e);
+        }
+
+        private void Menu_Undo(System.Object sender, System.EventArgs e)
+        {
+            // Determine if last operation can be undone in text box.   
+            if (richTextBox1.CanUndo == true)
+            {
+                // Undo the last operation.
+                richTextBox1.Undo();
+                // Clear the undo buffer to prevent last action from being redone.
+                richTextBox1.ClearUndo();
+            }
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Menu_Cut(System.Object sender, System.EventArgs e)
+        {
+            // Ensure that text is currently selected in the text box.   
+            if (richTextBox1.SelectedText != "")
+                // Cut the selected text in the control and paste it into the Clipboard.
+                richTextBox1.Cut();
+        }
+
+        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Menu_Cut(sender, e);
+        }
+
+        private void Menu_Copy(System.Object sender, System.EventArgs e)
+        {
+            // Ensure that text is selected in the text box.   
+            if (richTextBox1.SelectionLength > 0)
+                // Copy the selected text to the Clipboard.
+                richTextBox1.Copy();
+        }
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Menu_Copy(sender, e);
         }
     }
 }
