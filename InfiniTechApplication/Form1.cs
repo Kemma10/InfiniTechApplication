@@ -14,10 +14,13 @@ namespace InfiniTechApplication
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
         }
+
+ 
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -74,30 +77,10 @@ namespace InfiniTechApplication
             printDialog.ShowDialog(); // Show the dialog
         }
 
+        // this private void closes application
         private void exitStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit(); //Closes application
-        }
-        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Menu_Undo(sender, e);
-        }
-
-        private void Menu_Undo(System.Object sender, System.EventArgs e)
-        {
-            // Determine if last operation can be undone in text box.   
-            if (richTextBox1.CanUndo == true)
-            {
-                // Undo the last operation.
-                richTextBox1.Undo();
-                // Clear the undo buffer to prevent last action from being redone.
-                richTextBox1.ClearUndo();
-            }
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void Menu_Cut(System.Object sender, System.EventArgs e)
@@ -124,6 +107,44 @@ namespace InfiniTechApplication
         private void copyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Menu_Copy(sender, e);
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Menu_Undo(sender, e);
+        }
+
+        private void Menu_Undo(System.Object sender, System.EventArgs e)
+        {
+
+            // Determine if last operation can be undone in text box.   
+            if (richTextBox1.CanUndo == true)
+            {
+                // Undo the last operation.
+                richTextBox1.Undo();
+
+            }
+        }
+
+        // Method to handle redo operation
+        private void redoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Determines if a Redo operation can be performed.
+            if (richTextBox1.CanRedo == true)
+            {
+                    // Perform the redo.
+                    richTextBox1.Redo();
+            }
+        }
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Paste(); // Paste clipboard content into the RichTextBox
         }
     }
 }
