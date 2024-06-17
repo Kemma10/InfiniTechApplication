@@ -77,7 +77,7 @@ namespace InfiniTechApplication
             printDialog.ShowDialog(); // Show the dialog
         }
 
-        // this private void closes application
+        // private void closes application
         private void exitStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit(); //Closes application
